@@ -97,3 +97,9 @@ if st.button("🔍 Predict"):
         st.warning("🌧️ Light to Moderate Rain Expected.")
     else:
         st.success("🌞 Clear weather likely tomorrow.")
+import streamlit as st
+st.title("Test Streamlit")
+st.write("Hello, Streamlit is working!")
+streamlit run test_app.py
+        
+streamlit run app.py
