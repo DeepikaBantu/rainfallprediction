@@ -1,5 +1,3 @@
-# app.py
-
 import streamlit as st
 import numpy as np
 import joblib
@@ -12,10 +10,9 @@ st.set_page_config(page_title="Rainfall Prediction", page_icon="🌧️")
 st.title("🌦️ Rainfall Prediction using XGBoost")
 
 # --------------------------
-# Load XGBoost model from local GitHub repo
+# Load XGBoost model
 # --------------------------
 xgb_model_path = "xgb_model_imd_features.pkl"
-
 try:
     xgb_model = joblib.load(xgb_model_path)
 except Exception as e:
@@ -47,7 +44,6 @@ if st.button("🔍 Predict"):
     try:
         pred = xgb_model.predict(X_input)[0]
 
-        # Simulate rainfall amount
         rainfall_amount = np.random.uniform(0, 100) if pred==1 else np.random.uniform(0,10)
 
         st.subheader(f"🌤️ Prediction Result: {'Rain Tomorrow ☔' if pred==1 else 'No Rain 🌞'}")
