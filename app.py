@@ -10,12 +10,9 @@ import os
 
 # Download models from Google Drive if not already present
 if not os.path.exists("rf_model_imd_features.pkl"):
-    gdown.download("https://drive.google.com/uc?id=YOUR_RF_FILE_ID", "rf_model_imd_features.pkl", quiet=False)
-
+   gdown.download("https://drive.google.com/uc?id=1mkggx9pV0_cz96Zy--KBacyXFjfdPWTa", "rf_model_imd_features.pkl", quiet=False)
 if not os.path.exists("xgb_model_imd_features.pkl"):
-    gdown.download("https://drive.google.com/uc?id=YOUR_XGB_FILE_ID", "xgb_model_imd_features.pkl", quiet=False)
-
-
+  gdown.download("https://drive.google.com/uc?id=1ELOOh_li1HkECS24J78pcmRhIABfi_To", "xgb_model_imd_features.pkl", quiet=False)
 # Set page config
 st.set_page_config(page_title="Rainfall Prediction System", page_icon="🌧️")
 st.title("🌦️ Rainfall Prediction using ML (Random Forest & XGBoost)")
