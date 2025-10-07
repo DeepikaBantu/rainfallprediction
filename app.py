@@ -4,6 +4,17 @@
 import streamlit as st
 import numpy as np
 import joblib
+import joblib
+import gdown
+import os
+
+# Download models from Google Drive if not already present
+if not os.path.exists("rf_model_imd_features.pkl"):
+    gdown.download("https://drive.google.com/uc?id=YOUR_RF_FILE_ID", "rf_model_imd_features.pkl", quiet=False)
+
+if not os.path.exists("xgb_model_imd_features.pkl"):
+    gdown.download("https://drive.google.com/uc?id=YOUR_XGB_FILE_ID", "xgb_model_imd_features.pkl", quiet=False)
+
 
 # Set page config
 st.set_page_config(page_title="Rainfall Prediction System", page_icon="🌧️")
